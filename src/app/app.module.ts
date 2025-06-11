@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule} from '@angular/router';
+import { routes } from './app.routes';
 import { AppComponent } from './app.component';
+import { RxjsServiceService } from 'src/services/rxjs-service.service';
 
 @NgModule({
   declarations: [
@@ -10,9 +11,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [RxjsServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
