@@ -1,0 +1,50 @@
+<div class="my-3">
+    <h2>Off and From</h2>
+    <strong class="pt-2">Ex -01 (OF)</strong>
+
+    <div class="row mt-2">
+        <div class="col-md-6">
+            <p class=" pt-2 pb-2 ps-2 border rounded"><strong>Data : </strong>Of(Roshan , Ramesh , Ghuge)</p>
+            <hr>
+            <ul id="ulId"></ul>
+        </div>
+        <div class="col-md-6">
+            <p class=" pt-2 pb-2 ps-2 border rounded"><strong>Data : </strong>Of(&#123; a:Roshan , b:Ramesh , c:Ghuge &#125;)</p>
+            <hr>
+            <ul>
+                <span *ngFor="let item of msg | keyvalue">
+                    <li><strong>{{item.key}}</strong> : {{item.value}}</li>
+                </span>                
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+    <strong class="pt-2">Ex -02 (FROM)</strong>
+
+    <div class="row mt-2">
+        <div class="col-md-4">
+            <strong>Array</strong>
+            <hr>
+            <p class=" pt-2 pb-2 ps-2 border rounded"><strong>Data : </strong>FROM(Roshan , Ramesh , Ghuge)</p>
+            <hr>
+            <ul id="ulIdFrom"></ul>
+        </div>
+
+        <div class="col-md-4">
+            <strong>Promise to Observable</strong>
+            <hr>
+            <p class=" pt-2 pb-2 ps-2 border rounded"><strong>Data : </strong>Promise to Observable</p>
+            <hr>
+            <ul id="promise"></ul>
+        </div>
+        <div class="col-md-4">
+            <strong>String</strong>
+            <hr>
+            <p class=" pt-2 pb-2 ps-2 border rounded"><strong>Data : </strong>String</p>
+            <hr>
+            <ul id="string"></ul>
+        </div>
+    </div>
+
+</div>   
