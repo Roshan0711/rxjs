@@ -10,6 +10,26 @@ export class RxjsListComponent implements OnInit {
     {
       name : "From Event",
       link : "from-event"
+    },
+    {
+      name : "Interval",
+      link : "interval"
+    },
+    {
+      name : "Timer",
+      link : "timer"
+    },
+    {
+      name : "Off-From",
+      link : "off-from"
+    },
+    {
+      name : "ToArray",
+      link : "to-array"
+    },
+    {
+      name : "Custom Observable",
+      link : "custom-observable"
     }
   ]
   constructor() { }
