@@ -30,6 +30,30 @@ export class RxjsListComponent implements OnInit {
     {
       name : "Custom Observable",
       link : "custom-observable"
+    },
+    {
+      name : "Map",
+      link : "map"
+    },
+    {
+      name : "Pluck",
+      link : "pluck"
+    },
+    {
+      name : "Filter",
+      link : "filter"
+    },
+    {
+      name : "Tap",
+      link : "tap"
+    },
+    {
+      name : "Take , TakeLast , TakeUntil",
+      link : "take-takeLast-takeUntil"
+    },
+    {
+      name : "Retry , RetryWhen , Scan , Delay",
+      link : "retry"
     }
   ]
   constructor() { }

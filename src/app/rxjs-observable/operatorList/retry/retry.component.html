@@ -1,0 +1,114 @@
+<div class="my-3">
+  <h2>Retry , RetryWhen , Scan , Delay</h2>
+  <br />
+
+  <div class="row">
+    <div class="col-md-6">
+      <strong>Ex - 01</strong>
+      <hr />
+      <p class="bg-light pt-2 pb-2 ps-2 border rounded">
+        <strong>Rety : </strong>
+      </p>
+      <br />
+      <div *ngIf="data1 != null">
+        <table class="table">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+          <tr *ngFor="let item of data1">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.email }}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="mt-2">
+        <button
+          class="btn btn-primary btn-sm"
+          (click)="fetchDetails()"
+          type="button"
+          [disabled]="loading1"
+        >
+          <span
+            class="spinner-grow spinner-grow-sm"
+            aria-hidden="true"
+            *ngIf="loading1"
+          ></span>
+          <span role="status" *ngIf="loading1">Loading...</span>
+          {{ !loading1 ? "Fetch Details" : "" }}
+        </button>
+      </div>
+
+      <br />
+      <p>
+        status :
+        <strong
+          [ngClass]="{
+            'text-success': status1 == 'data Fetched',
+            'text-danger': status1 == 'Error while fetching Data'
+          }"
+          >{{ status1 }}</strong
+        >
+        <span *ngIf="loading1" class="spinner-grow spinner-grow-sm text-warning" role="status">
+            <!-- <span class="visually-hidden">Loading...</span> -->
+        </span>
+      </p>
+    </div>
+
+     <div class="col-md-6">
+      <strong>Ex - 02</strong>
+      <hr />
+      <p class="bg-light pt-2 pb-2 ps-2 border rounded">
+        <strong>Rety When , scan , delay : </strong>
+      </p>
+      <br />
+      <div *ngIf="data2 != null">
+        <table class="table">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+          <tr *ngFor="let item of data2">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.email }}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="mt-2">
+        <button
+          class="btn btn-primary btn-sm"
+          (click)="fetchDetailswhen()"
+          type="button"
+          [disabled]="loading2"
+        >
+          <span
+            class="spinner-grow spinner-grow-sm"
+            aria-hidden="true"
+            *ngIf="loading2"
+          ></span>
+          <span role="status" *ngIf="loading2">Loading...</span>
+          {{ !loading2 ? "Fetch Details" : "" }}
+        </button>
+      </div>
+
+      <br />
+      <p>
+        status :
+        <strong
+          [ngClass]="{
+            'text-success': status2 == 'data Fetched',
+            'text-danger': status2 == 'Error while fetching Data'
+          }"
+          >{{ status2 }}</strong
+        >
+        <span *ngIf="loading2" class="spinner-grow spinner-grow-sm text-warning" role="status">
+            <!-- <span class="visually-hidden">Loading...</span> -->
+        </span>
+      </p>
+    </div>
+  </div>
+</div>

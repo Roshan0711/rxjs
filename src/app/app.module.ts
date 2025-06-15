@@ -4,7 +4,6 @@ import { RouterModule} from '@angular/router';
 import { routes } from './app.routes';
 import { AppComponent } from './app.component';
 import { RxjsServiceService } from 'src/services/rxjs-service.service';
-
 @NgModule({
   declarations: [
     AppComponent

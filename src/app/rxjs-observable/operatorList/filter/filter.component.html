@@ -1,0 +1,46 @@
+<div class="my-3">
+    <h2>Filter</h2>
+
+     <div class="row">
+    <div class="col-md-6">
+      <strong>Ex - 01</strong>
+      <hr />
+      <p class="bg-light pt-2 pb-2 ps-2 border rounded">
+        <strong>Filter : </strong>By  Name Length > 4
+      </p>
+      <br />
+      <table class="table">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Gender</th>
+        </tr>
+        <tr *ngFor="let item of data1">
+            <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.gender}}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <strong>Ex - 02</strong>
+      <hr />
+      <p class="bg-light pt-2 pb-2 ps-2 border rounded">
+        <strong>Filter : </strong>By Gender
+      </p>
+      <br />
+      <table class="table">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Gender</th>
+        </tr>
+        <tr *ngFor="let item of data2">
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.gender}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
