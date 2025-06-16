@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RxjsServiceService } from 'src/services/rxjs-service.service';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  exclusive : boolean = false;
+  constructor(
+    private rxjs : RxjsServiceService
+  ) { 
+    this.rxjs.exclusive.subscribe((res)=>{
+      this.exclusive = res
+    })
+  }
 
   ngOnInit(): void {
   }

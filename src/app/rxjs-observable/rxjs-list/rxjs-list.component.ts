@@ -54,6 +54,18 @@ export class RxjsListComponent implements OnInit {
     {
       name : "Retry , RetryWhen , Scan , Delay",
       link : "retry"
+    },
+    {
+      name : "DebounceTime , DistinctUntilChanged",
+      link : "debounceTimer-and-distinctUntilChanged"
+    },
+    {
+      name : "Subject and BehaviorSubject",
+      link : "Subject-and-BehaviorSubject"
+    },
+     {
+      name : "Reply",
+      link : "reply"
     }
   ]
   constructor() { }

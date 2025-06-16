@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule} from '@angular/router';
 import { routes } from './app.routes';
 import { AppComponent } from './app.component';
-import { RxjsServiceService } from 'src/services/rxjs-service.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +11,7 @@ import { RxjsServiceService } from 'src/services/rxjs-service.service';
     BrowserModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [RxjsServiceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

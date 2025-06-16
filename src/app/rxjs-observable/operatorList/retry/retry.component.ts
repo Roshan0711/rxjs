@@ -71,7 +71,6 @@ export class RetryComponent implements OnInit {
       }
     )
   }
-
 }
 
 /*

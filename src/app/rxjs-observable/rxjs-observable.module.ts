@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { RxjsListComponent } from './rxjs-list/rxjs-list.component';
 import { FromEventComponent } from './operatorList/from-event/from-event.component';
 import { IntervalComponent } from './operatorList/interval/interval.component';
@@ -14,7 +15,10 @@ import { FilterComponent } from './operatorList/filter/filter.component';
 import { TapComponent } from './operatorList/tap/tap.component';
 import { TakeTakeLastTakeUntilComponent } from './operatorList/take-takeLast-takeUntil/take-takeLast-takeuntil.component';
 import { RetryComponent } from './operatorList/retry/retry.component';
-import { HttpClientModule } from '@angular/common/http';
+import { DebounceTimerAndDistinctUntilChangedComponent } from './operatorList/debounce-timer-and-distinct-until-changed/debounce-timer-and-distinct-until-changed.component';
+import { SubjectAndBehaviorSubjectComponent } from './operatorList/subject-and-behavior-subject/subject-and-behavior-subject.component';
+import {SubjectModule } from '../subject/subject.module';
+import { ReplayComponent } from './operatorList/replay/replay.component'
 export const routes: Routes = [
   {
     path : '',
@@ -67,6 +71,18 @@ export const routes: Routes = [
   {
     path : 'retry',
     component : RetryComponent
+  },
+  {
+    path : 'debounceTimer-and-distinctUntilChanged',
+    component : DebounceTimerAndDistinctUntilChangedComponent
+  },
+  {
+    path : 'Subject-and-BehaviorSubject',
+    component : SubjectAndBehaviorSubjectComponent,
+  },
+  {
+    path : 'reply',
+    component : ReplayComponent,
   }
 ];
 
@@ -85,12 +101,16 @@ export const routes: Routes = [
     FilterComponent,
     TapComponent,
     TakeTakeLastTakeUntilComponent,
-    RetryComponent
+    RetryComponent,
+    DebounceTimerAndDistinctUntilChangedComponent,
+    SubjectAndBehaviorSubjectComponent,
+    ReplayComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    HttpClientModule
+    HttpClientModule,
+    SubjectModule
   ]
 })
 export class RxjsObservableModule { }
