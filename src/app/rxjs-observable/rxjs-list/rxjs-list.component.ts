@@ -63,10 +63,38 @@ export class RxjsListComponent implements OnInit {
       name : "Subject and BehaviorSubject",
       link : "Subject-and-BehaviorSubject"
     },
-     {
+    {
       name : "Reply",
       link : "reply"
-    }
+    },
+    {
+      name : "Async Subject",
+      link : "async"
+    },
+    {
+      name : "Concat",
+      link : "concat"
+    },
+    {
+      name : "Merge",
+      link : "merge"
+    },
+    {
+      name : "Merge Map (mergeAll + map)",
+      link : "merge-map"
+    },
+    {
+      name : "Concat Map (ConcatAll + map)",
+      link : "concat-map"
+    },
+    {
+      name : "Switch Map (SwtichAll + map)",
+      link : "switch-map"
+    },
+    {
+      name : "Exhaust Map",
+      link : "exhaust-map"
+    },
   ]
   constructor() { }
 

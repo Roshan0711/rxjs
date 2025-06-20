@@ -1,0 +1,143 @@
+<div class="my-3">
+  <h2>Swtich Map</h2>
+  <br />
+  <!-- basic example -->
+  <ng-container>
+    <div class="row">
+      <div class="col-md-4">
+        <strong>Ex - 01 | Map</strong>
+        <hr />
+        <p class="bg-light pt-2 pb-2 ps-2 border rounded">
+          <strong>Tech Video List : </strong>['tech', 'comedy', 'news']
+        </p>
+        <br />
+        <hr />
+        <ul id="elId1"></ul>
+      </div>
+
+      <div class="col-md-4">
+        <strong>Ex - 02 | Map + SwitchAll</strong>
+        <hr />
+        <p class="bg-light pt-2 pb-2 ps-2 border rounded">
+          <strong>Videos List : </strong>['tech', 'comedy', 'news']
+        </p>
+        <br />
+        <hr />
+        <ul id="elId2"></ul>
+      </div>
+      <div class="col-md-4">
+        <strong>Ex - 03 | Swtich Map</strong>
+        <hr />
+        <p class="bg-light pt-2 pb-2 ps-2 border rounded">
+          <strong>Videos List : </strong>['tech', 'comedy', 'news']
+        </p>
+        <br />
+        <hr />
+        <ul id="elId3"></ul>
+      </div>
+    </div>
+  </ng-container>
+
+  <br />
+  <hr />
+
+  <!-- Comparision between MergeMap , concatMap , and SwtichMap -->
+  <ng-container>
+    <h5 class="text-center fw-bold">
+      Comparision between MergeMap , concatMap and switchMap
+    </h5>
+    <br />
+    <div class="row">
+      <div class="col-md-4">
+        <strong>Ex - 01 | MergeMap</strong>
+        <hr />
+        <p class="bg-light pt-2 pb-2 ps-2 border rounded">
+          <strong>Tech Video List : </strong>['tech', 'comedy', 'news']
+        </p>
+        <br />
+        <hr />
+        <ul id="elId4"></ul>
+      </div>
+
+      <div class="col-md-4">
+        <strong>Ex - 02 | concatMap</strong>
+        <hr />
+        <p class="bg-light pt-2 pb-2 ps-2 border rounded">
+          <strong>Videos List : </strong>['tech', 'comedy', 'news']
+        </p>
+        <br />
+        <hr />
+        <ul id="elId5"></ul>
+      </div>
+      <div class="col-md-4">
+        <strong>Ex - 03 | SwtichMap</strong>
+        <hr />
+        <p class="bg-light pt-2 pb-2 ps-2 border rounded">
+          <strong>Videos List : </strong>['tech', 'comedy', 'news']
+        </p>
+        <br />
+        <hr />
+        <ul id="elId6"></ul>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- search Functionality -->
+  <br />
+  <hr />
+  <ng-container>
+    <h5 class="text-center fw-bold">Search Youtube Videos</h5>
+<div class="row justify-content-center mt-4">
+  <div class="col-md-6">
+    <div class="input-group shadow-sm">
+      <input
+        type="text"
+        class="form-control rounded-start border-primary"
+        placeholder="Search for videos..."
+        #inputText1
+      />
+      <span class="input-group-text bg-white border-primary">
+        <span
+          *ngIf="loading"
+          class="spinner-border spinner-border-sm text-primary"
+          role="status"
+        ></span>
+        <span *ngIf="!loading" class="text-muted">
+          🔍
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+
+
+    <div class="result">
+      <div class="d-flex">
+        <h5>Search Results</h5>
+        <span class="ms-auto text-muted">
+          {{ this.youtubeVideos.length }} results found...</span
+        >
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Thumbnil</th>
+            <th scope="col">Title & Description</th>
+            <th scope="col">Click to Watch</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of youtubeVideos; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td><img src="{{ item.thumbnail }}" alt="" /></td>
+            <td>{{ item.title }}</td>
+            <td class="clickable">
+              <a href="{{ item.url }}" target="_blank">click To Watch</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-container>
+</div>

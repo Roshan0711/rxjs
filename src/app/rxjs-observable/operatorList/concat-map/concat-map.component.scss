@@ -1,31 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
-ul.techList {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+body {
+  background: #f4f6fc;
+  
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #3F436B;
+    color: #fff;
+    opacity: 0.6;
+  }
 }
-
-ul.techList li {
-    background: #f8f8f8;
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 8px 13px;
-    margin-bottom: 10px;
-
-}
-
-ul.techList.error li {
-    color: red;
-    border-color: red;
-    background: rgba(255,0,0,0.08);
-}
-
-ul.techList.completed li {
-    color: #3dd843;
-    border-color: #3dd843;
-    background: rgba(61,216,67,0.08);
-}
-
 
 .iphone-x {
   position: relative;
@@ -119,7 +104,7 @@ display: flex;
   
   // time
   s {
-    top: 50px;
+    top: 10px;
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -150,15 +135,6 @@ body {
   background: #f4f6fc;
   margin: 0;
   padding: 0;
-   &:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    background-color: #3F436B;
-    color: #fff;
-    opacity: 0.6;
-  }
 }
 
 .notification-list {

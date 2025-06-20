@@ -1,0 +1,42 @@
+<div class="my-3">
+  <h2>Async Subject</h2>
+
+  <div class="row"></div>
+
+  <hr />
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+      <div class="form-group row mb-2">
+        <label class="col-sm-4 col-form-label">Add Video</label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter here"
+            #inputText1
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-primary btn-sm mt-1" (click)="clickMe(inputText1)">Add video</button>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="row">
+    <div class="col-md-6">
+      <strong>User - 01</strong>
+      <hr />
+      <ul class="video-List">
+        <li><strong>Video :</strong> {{ asyncVal }}</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <strong>Click to Complete</strong>
+      <hr />
+      <button class="btn btn-primary btn-sm mt-1" (click)="subscribed()">Complete Subscription</button>
+    </div>
+  </div>
+</div>
