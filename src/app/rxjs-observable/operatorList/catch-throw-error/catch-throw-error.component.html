@@ -1,0 +1,22 @@
+<div class="my-3">
+  <h2>CatchError & ThrowError</h2>
+  <br />
+  <strong>Products : <span class="text-primary">Laptop</span></strong>
+  <hr />
+  <div *ngIf="error != ''" class="alert alert-danger" role="alert">
+    <strong>Error : </strong>{{error}}
+    <button class="text-end" data-dismiss="alert" aria-label="close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <button class="btn btn-primary btn-sm" (click)="fetchDetails()" type="button">
+    <span
+      class="spinner-grow spinner-grow-sm"
+      aria-hidden="true"
+      *ngIf="loading"
+    ></span>
+    <span role="status" *ngIf="loading">Loading...</span>
+    {{ !loading ? "Fetch Details" : "" }}
+  </button>
+</div>

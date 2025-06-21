@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header">Component 1</div>
+  <div class="card-body">
+    <div class="form-group row mb-2">
+    <p class="mb-2"> Username is : <strong class="text-primary">{{username}}</strong></p>
+      <label class="col-sm-3 col-form-label">Username</label>
+      <div class="col-sm-9">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter Username here"
+          #inputText1
+        />
+      </div>
+    </div>
+    <button class="btn btn-primary btn-sm" (click)="getName(inputText1)">Update Username</button>
+  </div>
+</div>

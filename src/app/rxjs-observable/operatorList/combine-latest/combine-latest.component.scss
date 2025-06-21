@@ -1,0 +1,63 @@
+ body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f2f4f8;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .custom-select-wrapper {
+      position: relative;
+      display: inline-block;
+      width: 250px;
+      margin-top: 10px;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #d1d9e6;
+      background-color: #ffffff;
+      color: #333;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: #5c9ded;
+      box-shadow: 0 0 0 3px rgba(92, 157, 237, 0.2);
+    }
+
+    .custom-select-wrapper::after {
+      content: '▼';
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #555;
+      font-size: 14px;
+      pointer-events: none;
+    }
+
+    .colourClass {
+      width: 150px;
+      height: 50px;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      margin-right: 30px;
+      margin-top: 10px;
+    }

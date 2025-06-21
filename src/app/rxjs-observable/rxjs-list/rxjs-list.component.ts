@@ -30,7 +30,87 @@ export class RxjsListComponent implements OnInit {
     {
       name : "Custom Observable",
       link : "custom-observable"
-    }
+    },
+    {
+      name : "Map",
+      link : "map"
+    },
+    {
+      name : "Pluck",
+      link : "pluck"
+    },
+    {
+      name : "Filter",
+      link : "filter"
+    },
+    {
+      name : "Tap",
+      link : "tap"
+    },
+    {
+      name : "Take , TakeLast , TakeUntil",
+      link : "take-takeLast-takeUntil"
+    },
+    {
+      name : "Retry , RetryWhen , Scan , Delay",
+      link : "retry"
+    },
+    {
+      name : "DebounceTime , DistinctUntilChanged",
+      link : "debounceTimer-and-distinctUntilChanged"
+    },
+    {
+      name : "Subject and BehaviorSubject",
+      link : "Subject-and-BehaviorSubject"
+    },
+    {
+      name : "Reply",
+      link : "reply"
+    },
+    {
+      name : "Async Subject",
+      link : "async"
+    },
+    {
+      name : "Concat",
+      link : "concat"
+    },
+    {
+      name : "Merge",
+      link : "merge"
+    },
+    {
+      name : "Merge Map (mergeAll + map)",
+      link : "merge-map"
+    },
+    {
+      name : "Concat Map (ConcatAll + map)",
+      link : "concat-map"
+    },
+    {
+      name : "Switch Map (SwtichAll + map)",
+      link : "switch-map"
+    },
+    {
+      name : "Exhaust Map (ExhaustAll + map)",
+      link : "exhaust-map"
+    },
+    {
+      name : "Share Reply",
+      link : "shareReply"
+    },
+    {
+      name : "CombineLatest & WithLatestFrom",
+      link : "combineLatest"
+    },
+    {
+      name : "Zip & Fork Join",
+      link : "zip-and-forkJoin"
+    },
+    {
+      name : "CatchError & ThrowError",
+      link : "catchError-throwError"
+    },
   ]
   constructor() { }
 
