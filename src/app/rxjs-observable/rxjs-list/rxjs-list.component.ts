@@ -92,8 +92,24 @@ export class RxjsListComponent implements OnInit {
       link : "switch-map"
     },
     {
-      name : "Exhaust Map",
+      name : "Exhaust Map (ExhaustAll + map)",
       link : "exhaust-map"
+    },
+    {
+      name : "Share Reply",
+      link : "shareReply"
+    },
+    {
+      name : "CombineLatest & WithLatestFrom",
+      link : "combineLatest"
+    },
+    {
+      name : "Zip & Fork Join",
+      link : "zip-and-forkJoin"
+    },
+    {
+      name : "CatchError & ThrowError",
+      link : "catchError-throwError"
     },
   ]
   constructor() { }

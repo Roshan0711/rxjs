@@ -25,7 +25,11 @@ import { MergeComponent } from './operatorList/merge/merge.component';
 import { MergeMapComponent } from './operatorList/merge-map/merge-map.component';
 import { ConcatMapComponent } from './operatorList/concat-map/concat-map.component';
 import { SwitchMapComponent } from './operatorList/switch-map/switch-map.component';
-import { ExhaustMapComponent } from './operatorList/exhaust-map/exhaust-map.component'
+import { ExhaustMapComponent } from './operatorList/exhaust-map/exhaust-map.component';
+import { ShareReplyComponent } from './operatorList/share-reply/share-reply.component';
+import { CombineLatestComponent } from './operatorList/combine-latest/combine-latest.component';
+import {ZipAndForkJoinComponent } from './operatorList/zip-and-fork-join/zip-and-fork-join.component';
+import { CatchThrowErrorComponent } from './operatorList/catch-throw-error/catch-throw-error.component'
 export const routes: Routes = [
   {
     path : '',
@@ -118,7 +122,23 @@ export const routes: Routes = [
   {
     path : 'exhaust-map',
     component : ExhaustMapComponent,
-  }
+  },
+  {
+    path : 'shareReply',
+    component : ShareReplyComponent,
+  },
+  {
+    path : 'combineLatest',
+    component : CombineLatestComponent,
+  },
+  {
+    path : 'zip-and-forkJoin',
+    component : ZipAndForkJoinComponent,
+  },
+  {
+    path : 'catchError-throwError',
+    component : CatchThrowErrorComponent,
+  },
 ];
 
 
@@ -146,7 +166,11 @@ export const routes: Routes = [
     MergeMapComponent,
     ConcatMapComponent,
     SwitchMapComponent,
-    ExhaustMapComponent
+    ExhaustMapComponent,
+    ShareReplyComponent,
+    CombineLatestComponent,
+    ZipAndForkJoinComponent,
+    CatchThrowErrorComponent
   ],
   imports: [
     CommonModule,

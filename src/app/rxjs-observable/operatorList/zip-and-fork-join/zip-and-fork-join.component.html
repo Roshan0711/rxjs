@@ -1,0 +1,49 @@
+<div class="my-3">
+  <h2>Zip & ForkJoin</h2>
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Names</strong>
+      <hr />
+      <div class="custom-select-wrapper">
+        <select #name>
+          <option selected disabled>Choose an option</option>
+          <option value="{{ item }}" *ngFor="let item of toppingList">
+            {{ item }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <strong>Zip</strong>
+      <hr />
+      <div class="row" id="id">
+        <!-- <div class="colourClass">Roshan</div>
+        <div class="colourClass">Ramesh</div>
+        <div class="colourClass">Ghuge</div> -->
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Colours</strong>
+      <hr />
+      <div class="custom-select-wrapper">
+        <select #colour>
+          <option selected disabled>Choose an option</option>
+          <option value="{{ item }}" *ngFor="let item of colours">
+            {{ item }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6">
+        <strong>ForkJoin</strong>
+        <hr>
+        <div class="row" id="id2">    
+        </div>
+
+    </div>
+  </div>
+</div>
