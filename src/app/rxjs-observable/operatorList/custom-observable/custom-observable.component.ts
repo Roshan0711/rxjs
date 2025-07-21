@@ -118,6 +118,4 @@ Interview Answer Template:
 A custom observable is manually created using the Observable constructor in RxJS. 
 It allows us to define exactly how the data stream behaves—including when to emit values, throw errors, or complete. 
 This is useful when integrating non-RxJS async sources like WebSocket messages, event callbacks, or custom business logic.
-
-
 */

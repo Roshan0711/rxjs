@@ -10,3 +10,33 @@
             </div>
     </div>
 </div>
+
+<br><br>
+<div>
+  <h2>What is <code>timer</code> in RxJS?</h2>
+  <p>
+    <code>timer</code> is a creation operator that emits a number after a specified delay, 
+    and—if given a second argument—continues emitting sequential numbers at regular intervals. 
+    Think of it as a more flexible combination of <code>setTimeout</code> and <code>setInterval</code>.
+  </p>
+
+  <h3>Interview Answer Template:</h3>
+  <blockquote>
+    <p>
+      <code>timer</code> in RxJS is used to create an observable that emits after a specific delay 
+      or after a delay and then continues to emit values at regular intervals. 
+      It's useful for delayed execution, retry logic, and polling with a delay. 
+      Unlike <code>interval</code>, it gives more control over the initial delay and emission frequency.
+    </p>
+  </blockquote>
+
+  <h3>Syntax:</h3>
+  <pre><code>timer(dueTime: number, period?: number): Observable&lt;number&gt;</code></pre>
+
+  <h3>Use Cases:</h3>
+  <ul>
+    <li>Delayed execution (similar to <code>setTimeout</code>).</li>
+    <li>Polling with an initial delay and then periodic emissions.</li>
+    <li>Implementing retry logic with a backoff delay.</li>
+  </ul>
+</div>

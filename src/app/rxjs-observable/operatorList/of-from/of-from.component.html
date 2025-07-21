@@ -48,3 +48,44 @@
     </div>
 
 </div>   
+<br><br>
+<div>
+  <h2>Comparing <code>of</code> vs. <code>from</code> in RxJS</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th><code>of</code></th>
+        <th><code>from</code></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Input</td>
+        <td>Any values (single or multiple)</td>
+        <td>Array, Promise, Iterable, Observable</td>
+      </tr>
+      <tr>
+        <td>Emits</td>
+        <td>Whole value as-is</td>
+        <td>Emits each item from the input sequentially</td>
+      </tr>
+      <tr>
+        <td>Use case</td>
+        <td>Static or synchronous data</td>
+        <td>Async data or iterables (Promise, array, etc.)</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <h3 class="mt-4">Interview Answer Template:</h3>
+  <blockquote>
+    <p>
+      <code>of</code> and <code>from</code> are RxJS creation operators used to convert data into observables.
+      <code>of</code> emits the entire value as-is, whether it’s a single value, object, or array.
+      <code>from</code> breaks down iterables or promises into individual emissions.
+      They’re useful when you want to work with different data sources in a reactive way.
+    </p>
+  </blockquote>
+</div>

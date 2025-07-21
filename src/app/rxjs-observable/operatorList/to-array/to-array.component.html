@@ -1,3 +1,59 @@
 <div class="my-3">
     <h2>To Array</h2>
 </div>  
+<br>
+<div class="d-flex justify-content-center">
+    <p class=" p-2 border rounded"><strong>Data : </strong>(Roshan , Ramesh , Ghuge)</p>
+    <p class="ms-2 p-2 border rounded"><strong>Output : </strong>{{resp | json}}</p>
+</div>
+
+<br><br>
+
+<div>
+  <h2>What is <code>toArray</code> in RxJS?</h2>
+  <p>
+    <code>toArray</code> is a transformation operator in RxJS that collects all emitted values 
+    into a single array and emits that array when the source observable completes.
+  </p>
+
+  <h3>Interview Answer Template:</h3>
+  <blockquote>
+    <p>
+      <code>toArray</code> is a transformation operator in RxJS that gathers all emitted values into an array 
+      and emits it once the source observable completes. 
+      It's useful when you want to collect all emitted values over time and work with them as a group 
+      instead of individually.
+    </p>
+  </blockquote>
+
+  <h3>Syntax:</h3>
+  <pre><code>toArray(): OperatorFunction&lt;T, T[]&gt;</code></pre>
+
+  <h3>Key Points:</h3>
+  <ul>
+    <li>It does not emit until the source observable completes.</li>
+    <li>Often used with finite streams like <code>range</code>, <code>from</code>, or when using <code>take()</code>.</li>
+  </ul>
+
+  <h3>Common Questions:</h3>
+  <ol>
+    <li>
+      <strong>Does <code>toArray</code> emit immediately?</strong><br />
+      No—it waits until the source completes. If the source is infinite (like <code>interval</code>), 
+      it will never emit unless combined with a completion operator like <code>take()</code>.
+    </li>
+    <li>
+      <strong>Can <code>toArray</code> be used with <code>HttpClient</code> in Angular?</strong><br />
+      Usually not needed, because HTTP calls emit once and complete. 
+      But if combining multiple values (e.g., via <code>merge</code> or <code>concat</code>), 
+      <code>toArray()</code> can group the responses into a single array.
+    </li>
+  </ol>
+
+  <h3>❗️ Important Tip:</h3>
+  <p>
+    Avoid using <code>toArray()</code> with never-ending observables like <code>fromEvent</code> or <code>interval</code> 
+    unless you’re using <code>take</code>, <code>first</code>, or <code>takeUntil</code>, 
+    or it will never emit.
+  </p>
+</div>

@@ -75,9 +75,9 @@ export class OfFromComponent implements OnInit {
 | Use case | Static or synchronous data      | Async data or iterables (Promise, array, etc.) |
 
 Interview Answer Template:
-"of and from are RxJS creation operators used to convert data into observables.
+of and from are RxJS creation operators used to convert data into observables.
 of emits the entire value as-is, whether it's a single value, object, or array.
 
 from breaks down iterables or promises into individual emissions.
-They're useful when you want to work with different data sources in a reactive way."
+They're useful when you want to work with different data sources in a reactive way.
 */
