@@ -145,21 +145,28 @@ display: flex;
   }
 }
 
+// body {
+//   font-family: Arial, sans-serif;
+//   background: #f4f6fc;
+//   margin: 0;
+//   padding: 0;
+//    &:after {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     padding: 10px;
+//     background-color: #3F436B;
+//     color: #fff;
+//     opacity: 0.6;
+//   }
+// }
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f6fc;
-  margin: 0;
-  padding: 0;
-   &:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    background-color: #3F436B;
-    color: #fff;
-    opacity: 0.6;
-  }
-}
+    width: 100%;
+    height: 100vh; /* Use height instead of min-height for proper centering */
+    background: #f4f6fc;
+    margin: 0;
+} 
 
 .notification-list {
   width: 360px;

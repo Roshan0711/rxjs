@@ -1,5 +1,5 @@
 <div class="my-3">
-    <h2>From Eevent</h2>
+    <h2>From Event</h2>
 </div>  
 
 <div class="row">
@@ -27,4 +27,36 @@
                 </div>
         </div>
     </div>
+</div>
+
+<br><br>
+<div>
+  <h2>What is <code>fromEvent</code> in RxJS?</h2>
+  <p>
+    <code>fromEvent</code> is an RxJS creation operator used to create an observable from DOM events (or Node.js EventEmitters).
+  </p>
+
+  <h3>Interview Answer Template:</h3>
+  <blockquote>
+    <p>
+      <code>fromEvent</code> is a creation operator in RxJS that allows us to listen to DOM events and turn them into observable streams.
+      It's commonly used in Angular to handle things like click events, key presses, or scroll events in a reactive way.
+      This helps us manage async behavior more declaratively.
+    </p>
+  </blockquote>
+
+  <h3>Syntax:</h3>
+  <pre><code>fromEvent(target: EventTarget, eventName: string): Observable&lt;Event&gt;</code></pre>
+
+  <h3>What's the benefit over just using <code>(click)</code> in Angular templates?</h3>
+  <p>
+    Using <code>fromEvent</code> gives you full control over the stream. 
+    You can pipe multiple RxJS operators (like filtering, throttling, mapping), 
+    and manage complex scenarios like combining multiple events.
+  </p>
+
+  <h3>How do you debounce or throttle clicks?</h3>
+  <p>
+    You can use <code>fromEvent</code> with operators like <code>debounceTime</code> or <code>throttleTime</code> to control event frequency.
+  </p>
 </div>

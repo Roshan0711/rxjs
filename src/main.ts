@@ -8,5 +8,6 @@ if (environment.production) {
   enableProdMode();
 }
 
+// , { ngZone: 'noop' } used for disabled change-detection
 platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+.catch(err => console.error(err));

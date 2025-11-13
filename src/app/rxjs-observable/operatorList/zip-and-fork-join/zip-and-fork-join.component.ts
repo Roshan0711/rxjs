@@ -84,7 +84,7 @@ Combines values by index position
 | `zip`            | When **all emit once per round**         | Strict 1:1 pairing           |
 | `combineLatest`  | When **any emits** (after all emit once) | Uses latest values from all  |
 | `withLatestFrom` | When **source emits**                    | Pulls latest from others     |
-| `forkJoin`       | When **all complete**                    | Emits only final values once |
+| `forkJoin`       | When **all complete**(emit latest value) | Emits only final values once |
 
 
 

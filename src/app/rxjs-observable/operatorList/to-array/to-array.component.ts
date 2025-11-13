@@ -8,7 +8,7 @@ import { take, toArray } from 'rxjs/operators';
   styleUrls: ['./to-array.component.scss']
 })
 export class ToArrayComponent implements OnInit {
-
+  resp :Array<[]> =[]
   constructor() { }
 
   ngOnInit(): void {
@@ -23,7 +23,7 @@ export class ToArrayComponent implements OnInit {
     //example 2
     const example2 = of('Roshan', 'Ramesh', 'Ghuge');
     example2.pipe(toArray()).subscribe((resp:any) => {
-      console.log(resp)
+      this.resp =resp
     });
   }
 }

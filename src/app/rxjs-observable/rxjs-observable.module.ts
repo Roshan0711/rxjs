@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { ActivatedRoute, Route, Router, RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { RxjsListComponent } from './rxjs-list/rxjs-list.component';
 import { FromEventComponent } from './operatorList/from-event/from-event.component';
@@ -179,4 +179,13 @@ export const routes: Routes = [
     SubjectModule
   ]
 })
-export class RxjsObservableModule { }
+export class RxjsObservableModule { 
+  constructor (
+    private router : Router,
+    private routes : ActivatedRoute
+  ){
+    console.log("RXJS pre load module");
+    console.log(this.routes.snapshot.data);
+    this.routes.data.subscribe((res:any)=>{console.log("Rxjs pre loaded",res)})
+  }
+}

@@ -10,3 +10,36 @@
             </div>
     </div>
 </div>
+
+<br><br>
+<div>
+  <h2>What is <code>interval</code> in RxJS?</h2>
+  <p>
+    <code>interval</code> is a creation operator in RxJS that emits an increasing number at a specified time interval.
+    It's commonly used for polling, animations, timers, or periodic tasks.
+  </p>
+
+  <h3>Interview Answer Template:</h3>
+  <blockquote>
+    <p>
+      <code>interval</code> is an RxJS operator that creates an observable which emits sequential numbers at regular time intervals.
+      It’s often used for polling APIs, updating the UI periodically, or creating timers.
+      It runs indefinitely until unsubscribed.
+    </p>
+  </blockquote>
+
+  <h3>Syntax:</h3>
+  <pre><code>interval(period: number): Observable&lt;number&gt;</code></pre>
+
+  <h3>Use Case in Angular:</h3>
+  <ul>
+    <li>Auto-refresh every 5 seconds</li>
+  </ul>
+
+  <h3>What's the difference between <code>interval</code> and <code>timer</code>?</h3>
+  <p>
+    <code>interval</code> emits values repeatedly at regular intervals, starting after the first delay.
+    <br />
+    <code>timer</code> can emit once after a delay, or repeatedly like <code>interval</code> if passed two arguments.
+  </p>
+</div>
