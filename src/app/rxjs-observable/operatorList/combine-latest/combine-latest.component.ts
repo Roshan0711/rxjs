@@ -184,3 +184,9 @@ withLatestFrom emits only when the main source emits — it just fetches latest 
 | Best for      | **Event-triggered enrichment**                      |
 
 */
+
+
+// combineLatest → emits latest values whenever any emits (after all emitted once).
+// zip → emits when all emit the Nth value.
+// forkJoin → emits once when all complete, with their last values.
+// withLatestFrom → emits only when the source emits, using the latest from others.

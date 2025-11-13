@@ -15,9 +15,13 @@ export class httpInterceptors implements HttpInterceptor{
             headers : req.headers.append("timeStamp",''+Date.now().toString()),
         });
 
-        req = req.clone({
-            body: this.helperFunctionService.encryption(req.body),
-        });
+      
+
+        if(!req.headers.has('No-Auth')){
+            req = req.clone({
+                body: this.helperFunctionService.encryption(req.body),
+            });
+        }
 
         return next.handle(req).pipe(
             map((event:HttpEvent<any>)=>{

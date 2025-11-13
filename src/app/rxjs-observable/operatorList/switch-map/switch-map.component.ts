@@ -2,6 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { from, fromEvent, Observable, of, throwError } from 'rxjs';
 import { catchError, concatMap, debounceTime, delay, distinctUntilChanged, map, mergeMap, switchAll, switchMap, tap } from 'rxjs/operators';
+import { CommonService } from 'src/services/common.service';
 import { RxjsServiceService } from 'src/services/rxjs-service.service';
 
 @Component({
@@ -14,8 +15,11 @@ export class SwitchMapComponent implements OnInit , AfterViewInit {
   loading: boolean = false;
   youtubeVideos :any =[]
 
-  constructor(private rxjs : RxjsServiceService,
-    private http : HttpClient
+  constructor(
+    private rxjs : RxjsServiceService,
+    private http : HttpClient,
+    private commonService : CommonService
+    
   ) { }
 
   ngOnInit(): void {
@@ -83,7 +87,8 @@ export class SwitchMapComponent implements OnInit , AfterViewInit {
 
   getDatafromService(term:any) : Observable<any> {
     let apiKey = 'AIzaSyB3QPLUVOo5SZMuGBkqId9emaWkr7KQpsw';
-    return this.http.get<any>(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=10&q=${encodeURIComponent(term)}&key=${apiKey}`).pipe(
+    return this.http.get<any>(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=10&q=${encodeURIComponent(term)}&key=${apiKey}`
+  ).pipe(
       map(res => res.items.map((item: any) => ({
         title: item.snippet.title,
         thumbnail: item.snippet.thumbnails.default.url,
@@ -93,7 +98,19 @@ export class SwitchMapComponent implements OnInit , AfterViewInit {
        return throwError((error))
       })
     )
+
+  // return this.commonService.getApi(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=10&q=${encodeURIComponent(term)}&key=${apiKey}`
+  //   , { headers: { 'No-Auth': 'true' } }
+  // ).pipe(
+  //    map(res => res.items.map((item: any) => ({
+  //       title: item.snippet.title,
+  //       thumbnail: item.snippet.thumbnails.default.url,
+  //       url: `https://www.youtube.com/watch?v=${item.id.videoId}`
+  //     })))
+  //   )
   }
+
+
 
 }
 

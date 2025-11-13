@@ -1,0 +1,8 @@
+<p #elem>component-ref works!</p>
+<ng-template #tpl let-name="name">
+  <p>Hello {{name}}</p>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="tpl; context: { name: 'Roshan' }"></ng-container>
+
+<ng-container #container></ng-container>

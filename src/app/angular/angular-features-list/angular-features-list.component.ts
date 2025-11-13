@@ -11,6 +11,10 @@ export class AngularFeaturesListComponent implements OnInit {
       name : "what is Angular",
       link : "angular-definition"
     },
+      {
+      name : "component-ref",
+      link : "component-ref"
+    },
   ]
   constructor() { }
 

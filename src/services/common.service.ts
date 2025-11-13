@@ -14,7 +14,7 @@ export class CommonService {
     private http : HttpClient
   ) { }
 
-  getApi(url:string) : Observable<any> {
+  getApi(url:string , config? : any) : Observable<any> {
     return this.http.get<any>(url,{headers:this.headers , observe : 'response'}).pipe(
      map((data:any)=>{
       if(data.status == 200){
